@@ -3,8 +3,8 @@ Basic script for anti-debugging using assembly and the process environment block
 
 # How does it work?
 ```
-    1. Uses assembly to find the PEB (Process Enviorment Block)
-    2. Then we find the value for the BeingDebugged value
+    1. Uses assembly to find the PEB struct (Process Enviorment Block)
+    2. Then we find the value for the BeingDebugged value which is part of the PEB struct
     3. If true then we flag the program as being debugged and exit
 
     Pretty simple, though people can get around this quite easily,
